@@ -51,7 +51,8 @@ export default function AirportAutocomplete({
             <li
               key={airport.code}
               className="px-4 py-2 hover:bg-base-200 cursor-pointer"
-              onClick={() => {
+              onMouseDown={(e) => {
+                e.preventDefault();
                 onChange(airport.code);
                 setSearch('');
                 setShowDropdown(false);

@@ -87,6 +87,7 @@
     "destinationRequired": "الوجهة مطلوبة",
     "departureDateRequired": "تاريخ المغادرة مطلوب",
     "returnDateInvalid": "يجب أن يكون تاريخ العودة بعد تاريخ المغادرة",
+    "sameOriginDestination": "لا يمكن أن تكون مدينة الأصل والوجهة نفسها",
     "searchFailed": "فشل البحث",
     "noFlightsFound": "لم يتم العثور على رحلات",
     "tryAdjusting": "حاول تعديل التصفية أو معايير البحث",

@@ -87,6 +87,7 @@
     "destinationRequired": "Destination is required",
     "departureDateRequired": "Departure date is required",
     "returnDateInvalid": "Return date must be after departure date",
+    "sameOriginDestination": "Origin and destination cannot be the same",
     "searchFailed": "Search failed",
     "noFlightsFound": "No flights found",
     "tryAdjusting": "Try adjusting your filters or search criteria",

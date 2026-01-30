@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import { useRouter } from 'next/navigation';
-import { useTranslations } from 'next-intl';
+import { useTranslations, useLocale } from 'next-intl';
 import { useAppDispatch, useAppSelector } from '@/lib/redux/hooks';
 import { searchFlights } from '@/lib/redux/slices/flightsSlice';
 import { setSearchParams, addRecentSearch } from '@/lib/redux/slices/searchSlice';
@@ -18,6 +18,7 @@ export default function SearchForm() {
   const t = useTranslations('search');
   const tErrors = useTranslations('errors');
   const tCabin = useTranslations('cabinClass');
+  const locale = useLocale();
   const router = useRouter();
   const dispatch = useAppDispatch();
   const searchState = useAppSelector((state) => state.search);
@@ -38,6 +39,10 @@ export default function SearchForm() {
     if (!origin) newErrors.origin = tErrors('originRequired');
     if (!destination) newErrors.destination = tErrors('destinationRequired');
     if (!departureDate) newErrors.departureDate = tErrors('departureDateRequired');
+
+    if (origin && destination && origin === destination) {
+      newErrors.destination = tErrors('sameOriginDestination');
+    }
 
     if (returnDate && new Date(returnDate) <= new Date(departureDate)) {
       newErrors.returnDate = tErrors('returnDateInvalid');
@@ -68,7 +73,7 @@ export default function SearchForm() {
 
     try {
       await dispatch(searchFlights(searchParams)).unwrap();
-      router.push('/results');
+      router.push(`/${locale}/results`);
     } catch (error) {
       const errorMessage = error instanceof Error ? error.message : 'Search failed';
       dispatch(setError(errorMessage));
@@ -88,7 +93,12 @@ export default function SearchForm() {
           </label>
           <AirportAutocomplete
             value={origin}
-            onChange={setOrigin}
+            onChange={(value) => {
+              setOrigin(value);
+              if (errors.origin || errors.destination) {
+                setErrors({ ...errors, origin: '', destination: '' });
+              }
+            }}
             placeholder={t('selectOrigin')}
             error={errors.origin}
           />
@@ -100,7 +110,12 @@ export default function SearchForm() {
           </label>
           <AirportAutocomplete
             value={destination}
-            onChange={setDestination}
+            onChange={(value) => {
+              setDestination(value);
+              if (errors.destination) {
+                setErrors({ ...errors, destination: '' });
+              }
+            }}
             placeholder={t('selectDestination')}
             error={errors.destination}
           />

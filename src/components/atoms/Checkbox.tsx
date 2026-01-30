@@ -6,7 +6,7 @@ interface CheckboxProps extends React.InputHTMLAttributes<HTMLInputElement> {
 
 export default function Checkbox({ label, className = '', ...props }: CheckboxProps) {
   return (
-    <label className="label cursor-pointer justify-start gap-2">
+    <label className="label cursor-pointer justify-start gap-4 w-full">
       <input type="checkbox" className={`checkbox ${className}`} {...props} />
       <span className="label-text">{label}</span>
     </label>

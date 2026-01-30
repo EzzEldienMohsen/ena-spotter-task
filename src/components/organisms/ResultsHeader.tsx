@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { useRouter } from 'next/navigation';
-import { useTranslations } from 'next-intl';
+import { useTranslations, useLocale } from 'next-intl';
 import { useAppSelector, useAppDispatch } from '@/lib/redux/hooks';
 import { setSort } from '@/lib/redux/slices/flightsSlice';
 import { selectFilteredFlights } from '@/lib/redux/selectors/flightSelectors';
@@ -12,6 +12,7 @@ import Select from '@/components/atoms/Select';
 export default function ResultsHeader() {
   const t = useTranslations('results');
   const tSort = useTranslations('sort');
+  const locale = useLocale();
   const router = useRouter();
   const dispatch = useAppDispatch();
   const searchParams = useAppSelector((state) => state.search);
@@ -58,7 +59,7 @@ export default function ResultsHeader() {
               ]}
             />
           </div>
-          <Button variant="secondary" onClick={() => router.push('/')}>
+          <Button variant="secondary" onClick={() => router.push(`/${locale}`)}>
             {t('modifySearch')}
           </Button>
         </div>

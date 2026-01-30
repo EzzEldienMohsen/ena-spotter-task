@@ -90,7 +90,7 @@ export default function FilterSidebar() {
       </div>
 
       {/* Stops Filter */}
-      <div className="space-y-2">
+      <div className="space-y-3">
         <h4 className="font-semibold">{t('stops')}</h4>
         <Checkbox
           label={t('direct')}

@@ -20,7 +20,7 @@ export default function FlightCard({ flight }: FlightCardProps) {
           {/* Airline Info */}
           <div className="flex items-center gap-3">
             <div className="avatar placeholder">
-              <div className="bg-neutral text-neutral-content rounded-full w-12">
+              <div className="bg-neutral text-neutral-content rounded-full w-12 flex items-center justify-center">
                 <span className="text-xs">{flight.airlineCode}</span>
               </div>
             </div>
