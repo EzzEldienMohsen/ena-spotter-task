@@ -1,0 +1,162 @@
+{
+  "common": {
+    "appName": "Flight Search Engine",
+    "search": "Search",
+    "filter": "Filter",
+    "sort": "Sort",
+    "clear": "Clear",
+    "apply": "Apply",
+    "cancel": "Cancel",
+    "back": "Back",
+    "home": "Home",
+    "loading": "Loading",
+    "error": "Error",
+    "success": "Success",
+    "noResults": "No results found"
+  },
+  "nav": {
+    "searchFlights": "Search Flights",
+    "results": "Results",
+    "home": "Home"
+  },
+  "search": {
+    "title": "Flight Search Engine",
+    "subtitle": "Search and compare flights with real-time filtering",
+    "from": "From",
+    "to": "To",
+    "departureDate": "Departure Date",
+    "returnDate": "Return Date (Optional)",
+    "passengers": "Passengers",
+    "cabinClass": "Cabin Class",
+    "searchFlights": "Search Flights",
+    "selectOrigin": "Select origin",
+    "selectDestination": "Select destination",
+    "poweredBy": "Powered by Amadeus API • Real-time flight data",
+    "adults": "Adults",
+    "children": "Children",
+    "infants": "Infants",
+    "passenger": "Passenger",
+    "done": "Done"
+  },
+  "cabinClass": {
+    "economy": "Economy",
+    "premiumEconomy": "Premium Economy",
+    "business": "Business",
+    "first": "First Class"
+  },
+  "results": {
+    "modifySearch": "Modify Search",
+    "flightsFound": "flights found",
+    "flight": "flight",
+    "showFilters": "Show Filters",
+    "hideFilters": "Hide Filters",
+    "priceDistribution": "Price Distribution",
+    "clickBar": "Click on a bar to filter flights by that price range"
+  },
+  "filters": {
+    "title": "Filters",
+    "clearAll": "Clear All",
+    "stops": "Stops",
+    "direct": "Direct",
+    "oneStop": "1 Stop",
+    "twoStops": "2+ Stops",
+    "priceRange": "Price Range",
+    "minPrice": "Minimum price",
+    "maxPrice": "Maximum price",
+    "maxDuration": "Max Duration",
+    "maxFlightDuration": "Maximum flight duration",
+    "airlines": "Airlines",
+    "searchAirlines": "Search airlines..."
+  },
+  "sort": {
+    "priceLowHigh": "Price: Low to High",
+    "priceHighLow": "Price: High to Low",
+    "durationShortest": "Duration: Shortest",
+    "durationLongest": "Duration: Longest",
+    "departureEarliest": "Departure: Earliest",
+    "departureLatest": "Departure: Latest"
+  },
+  "flight": {
+    "select": "Select",
+    "stops": "stops",
+    "stop": "stop",
+    "direct": "Direct"
+  },
+  "errors": {
+    "originRequired": "Origin is required",
+    "destinationRequired": "Destination is required",
+    "departureDateRequired": "Departure date is required",
+    "returnDateInvalid": "Return date must be after departure date",
+    "searchFailed": "Search failed",
+    "noFlightsFound": "No flights found",
+    "tryAdjusting": "Try adjusting your filters or search criteria",
+    "apiError": "API Error",
+    "networkError": "Network error. Please check your connection.",
+    "unexpectedError": "An unexpected error occurred"
+  },
+  "loading": {
+    "searchingFlights": "Searching flights...",
+    "pleaseWait": "This may take a moment"
+  },
+  "notFound": {
+    "title": "Page Not Found",
+    "description": "Sorry, we couldn't find the page you're looking for. The page might have been moved, deleted, or never existed.",
+    "quickLinks": "QUICK LINKS",
+    "goHome": "Go to Homepage",
+    "goBack": "Go Back",
+    "errorCode": "Error Code: 404 - Page Not Found",
+    "flights": "Flights",
+    "destinations": "Destinations",
+    "speed": "Speed",
+    "realtime": "Real-time",
+    "searchResults": "Search Results",
+    "quality": "Quality",
+    "accuracy": "Accuracy"
+  },
+  "error": {
+    "title": "Oops! Something went wrong",
+    "description": "We encountered an unexpected error while processing your request.",
+    "errorDetails": "Error Details:",
+    "errorId": "Error ID:",
+    "couldBeDue": "This could be due to:",
+    "reason1": "A temporary server issue",
+    "reason2": "Network connectivity problems",
+    "reason3": "Invalid data or parameters",
+    "reason4": "An unexpected application bug",
+    "tryAgain": "Try Again",
+    "support": "If this problem persists, please contact support or try again later.",
+    "needHelp": "Need Help?",
+    "supportAvailable": "Support Available",
+    "uptime": "Uptime",
+    "reliableService": "Reliable Service"
+  },
+  "globalError": {
+    "title": "Critical Error",
+    "description": "The application encountered a critical error and needs to restart.",
+    "technicalDetails": "Technical Details:",
+    "whatHappened": "What happened?",
+    "reason1": "A critical error occurred at the application root level",
+    "reason2": "This might be due to a configuration issue or corrupted state",
+    "reason3": "Your data and searches are safe",
+    "restartApp": "Restart Application",
+    "ifPersists": "If this error persists, please try the following:",
+    "clearCache": "Clear Cache",
+    "clearCacheDesc": "Clear your browser cache and cookies",
+    "updateBrowser": "Update Browser",
+    "updateBrowserDesc": "Use the latest browser version",
+    "contactSupport": "Contact Support",
+    "contactSupportDesc": "Reach out if issue continues",
+    "footer": "Flight Search Engine • Global Error Handler",
+    "apology": "We apologize for the inconvenience"
+  },
+  "theme": {
+    "light": "Light",
+    "dark": "Dark",
+    "toggle": "Toggle theme"
+  },
+  "language": {
+    "english": "English",
+    "arabic": "العربية",
+    "toggle": "Change language"
+  }
+}

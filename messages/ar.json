@@ -1,0 +1,162 @@
+{
+  "common": {
+    "appName": "محرك البحث عن الرحلات",
+    "search": "بحث",
+    "filter": "تصفية",
+    "sort": "ترتيب",
+    "clear": "مسح",
+    "apply": "تطبيق",
+    "cancel": "إلغاء",
+    "back": "رجوع",
+    "home": "الرئيسية",
+    "loading": "جاري التحميل",
+    "error": "خطأ",
+    "success": "نجح",
+    "noResults": "لا توجد نتائج"
+  },
+  "nav": {
+    "searchFlights": "البحث عن رحلات",
+    "results": "النتائج",
+    "home": "الرئيسية"
+  },
+  "search": {
+    "title": "محرك البحث عن الرحلات",
+    "subtitle": "ابحث وقارن الرحلات مع التصفية في الوقت الفعلي",
+    "from": "من",
+    "to": "إلى",
+    "departureDate": "تاريخ المغادرة",
+    "returnDate": "تاريخ العودة (اختياري)",
+    "passengers": "الركاب",
+    "cabinClass": "درجة السفر",
+    "searchFlights": "البحث عن رحلات",
+    "selectOrigin": "اختر المدينة الأصل",
+    "selectDestination": "اختر الوجهة",
+    "poweredBy": "مدعوم بواسطة Amadeus API • بيانات الرحلات في الوقت الفعلي",
+    "adults": "بالغون",
+    "children": "أطفال",
+    "infants": "رضع",
+    "passenger": "راكب",
+    "done": "تم"
+  },
+  "cabinClass": {
+    "economy": "الدرجة الاقتصادية",
+    "premiumEconomy": "الدرجة الاقتصادية الممتازة",
+    "business": "درجة رجال الأعمال",
+    "first": "الدرجة الأولى"
+  },
+  "results": {
+    "modifySearch": "تعديل البحث",
+    "flightsFound": "رحلة موجودة",
+    "flight": "رحلة",
+    "showFilters": "إظهار التصفية",
+    "hideFilters": "إخفاء التصفية",
+    "priceDistribution": "توزيع الأسعار",
+    "clickBar": "انقر على شريط لتصفية الرحلات حسب نطاق السعر"
+  },
+  "filters": {
+    "title": "التصفية",
+    "clearAll": "مسح الكل",
+    "stops": "التوقفات",
+    "direct": "مباشر",
+    "oneStop": "توقف واحد",
+    "twoStops": "توقفان أو أكثر",
+    "priceRange": "نطاق السعر",
+    "minPrice": "السعر الأدنى",
+    "maxPrice": "السعر الأقصى",
+    "maxDuration": "المدة القصوى",
+    "maxFlightDuration": "المدة القصوى للرحلة",
+    "airlines": "شركات الطيران",
+    "searchAirlines": "البحث عن شركات الطيران..."
+  },
+  "sort": {
+    "priceLowHigh": "السعر: من الأقل إلى الأعلى",
+    "priceHighLow": "السعر: من الأعلى إلى الأقل",
+    "durationShortest": "المدة: الأقصر",
+    "durationLongest": "المدة: الأطول",
+    "departureEarliest": "المغادرة: الأبكر",
+    "departureLatest": "المغادرة: الأحدث"
+  },
+  "flight": {
+    "select": "اختيار",
+    "stops": "توقفات",
+    "stop": "توقف",
+    "direct": "مباشر"
+  },
+  "errors": {
+    "originRequired": "مدينة الأصل مطلوبة",
+    "destinationRequired": "الوجهة مطلوبة",
+    "departureDateRequired": "تاريخ المغادرة مطلوب",
+    "returnDateInvalid": "يجب أن يكون تاريخ العودة بعد تاريخ المغادرة",
+    "searchFailed": "فشل البحث",
+    "noFlightsFound": "لم يتم العثور على رحلات",
+    "tryAdjusting": "حاول تعديل التصفية أو معايير البحث",
+    "apiError": "خطأ في واجهة البرمجة",
+    "networkError": "خطأ في الشبكة. يرجى التحقق من اتصالك.",
+    "unexpectedError": "حدث خطأ غير متوقع"
+  },
+  "loading": {
+    "searchingFlights": "جاري البحث عن الرحلات...",
+    "pleaseWait": "قد يستغرق هذا بضع لحظات"
+  },
+  "notFound": {
+    "title": "الصفحة غير موجودة",
+    "description": "عذراً، لم نتمكن من العثور على الصفحة التي تبحث عنها. قد تكون الصفحة قد تم نقلها أو حذفها أو لم تكن موجودة من الأساس.",
+    "quickLinks": "روابط سريعة",
+    "goHome": "الذهاب للصفحة الرئيسية",
+    "goBack": "العودة",
+    "errorCode": "رمز الخطأ: 404 - الصفحة غير موجودة",
+    "flights": "الرحلات",
+    "destinations": "الوجهات",
+    "speed": "السرعة",
+    "realtime": "في الوقت الفعلي",
+    "searchResults": "نتائج البحث",
+    "quality": "الجودة",
+    "accuracy": "الدقة"
+  },
+  "error": {
+    "title": "عذراً! حدث خطأ ما",
+    "description": "واجهنا خطأ غير متوقع أثناء معالجة طلبك.",
+    "errorDetails": "تفاصيل الخطأ:",
+    "errorId": "معرّف الخطأ:",
+    "couldBeDue": "قد يكون هذا بسبب:",
+    "reason1": "مشكلة مؤقتة في الخادم",
+    "reason2": "مشاكل في الاتصال بالشبكة",
+    "reason3": "بيانات أو معاملات غير صالحة",
+    "reason4": "خطأ غير متوقع في التطبيق",
+    "tryAgain": "حاول مرة أخرى",
+    "support": "إذا استمرت هذه المشكلة، يرجى الاتصال بالدعم أو المحاولة مرة أخرى لاحقاً.",
+    "needHelp": "تحتاج مساعدة؟",
+    "supportAvailable": "الدعم متاح",
+    "uptime": "وقت التشغيل",
+    "reliableService": "خدمة موثوقة"
+  },
+  "globalError": {
+    "title": "خطأ حرج",
+    "description": "واجه التطبيق خطأ حرجاً ويحتاج إلى إعادة التشغيل.",
+    "technicalDetails": "التفاصيل التقنية:",
+    "whatHappened": "ماذا حدث؟",
+    "reason1": "حدث خطأ حرج على مستوى جذر التطبيق",
+    "reason2": "قد يكون هذا بسبب مشكلة في التكوين أو حالة تالفة",
+    "reason3": "بياناتك وعمليات البحث آمنة",
+    "restartApp": "إعادة تشغيل التطبيق",
+    "ifPersists": "إذا استمر هذا الخطأ، يرجى تجربة ما يلي:",
+    "clearCache": "مسح ذاكرة التخزين المؤقت",
+    "clearCacheDesc": "امسح ذاكرة التخزين المؤقت وملفات تعريف الارتباط",
+    "updateBrowser": "تحديث المتصفح",
+    "updateBrowserDesc": "استخدم أحدث إصدار من المتصفح",
+    "contactSupport": "اتصل بالدعم",
+    "contactSupportDesc": "تواصل معنا إذا استمرت المشكلة",
+    "footer": "محرك البحث عن الرحلات • معالج الأخطاء العامة",
+    "apology": "نعتذر عن الإزعاج"
+  },
+  "theme": {
+    "light": "فاتح",
+    "dark": "داكن",
+    "toggle": "تبديل السمة"
+  },
+  "language": {
+    "english": "English",
+    "arabic": "العربية",
+    "toggle": "تغيير اللغة"
+  }
+}
