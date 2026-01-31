@@ -9,6 +9,8 @@ export interface Flight {
   outbound: FlightSegment;
   inbound?: FlightSegment;
   cabinClass: string;
+  lastPriceUpdate?: number;
+  priceHistory?: Array<{ price: number; timestamp: number }>;
 }
 
 export interface FlightSegment {

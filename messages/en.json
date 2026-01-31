@@ -51,7 +51,9 @@
     "showFilters": "Show Filters",
     "hideFilters": "Hide Filters",
     "priceDistribution": "Price Distribution",
-    "clickBar": "Click on a bar to filter flights by that price range"
+    "clickBar": "Click on a bar to filter flights by that price range",
+    "live": "Live",
+    "reconnecting": "Reconnecting..."
   },
   "filters": {
     "title": "Filters",
@@ -80,7 +82,10 @@
     "select": "Select",
     "stops": "stops",
     "stop": "stop",
-    "direct": "Direct"
+    "direct": "Direct",
+    "priceUp": "Price Increased",
+    "priceDown": "Price Dropped",
+    "new": "New"
   },
   "errors": {
     "originRequired": "Origin is required",

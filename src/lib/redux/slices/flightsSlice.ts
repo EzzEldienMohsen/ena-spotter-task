@@ -85,6 +85,39 @@ const flightsSlice = createSlice({
       state.metadata.totalResults = 0;
       state.filters = initialState.filters;
     },
+    updateFlightPrice: (state, action: PayloadAction<{ flightId: string; price: number; priceChange: 'up' | 'down' }>) => {
+      const flight = state.rawResults.find(f => f.id === action.payload.flightId);
+      if (flight) {
+        // Add to price history
+        if (!flight.priceHistory) {
+          flight.priceHistory = [];
+        }
+        flight.priceHistory.push({
+          price: flight.price,
+          timestamp: Date.now(),
+        });
+
+        // Update price and timestamp
+        flight.price = action.payload.price;
+        flight.lastPriceUpdate = Date.now();
+      }
+    },
+    addNewFlight: (state, action: PayloadAction<Flight>) => {
+      // Add new flight at the beginning
+      state.rawResults.unshift(action.payload);
+      state.metadata.totalResults = state.rawResults.length;
+
+      // Update price range if needed
+      const prices = state.rawResults.map(f => f.price);
+      state.filters.priceRange = {
+        min: Math.floor(Math.min(...prices)),
+        max: Math.ceil(Math.max(...prices)),
+      };
+    },
+    removeFlight: (state, action: PayloadAction<string>) => {
+      state.rawResults = state.rawResults.filter(f => f.id !== action.payload);
+      state.metadata.totalResults = state.rawResults.length;
+    },
   },
   extraReducers: (builder) => {
     builder.addCase(searchFlights.fulfilled, (state, action) => {
@@ -109,6 +142,9 @@ export const {
   resetFilters,
   setSort,
   clearResults,
+  updateFlightPrice,
+  addNewFlight,
+  removeFlight,
 } = flightsSlice.actions;
 
 export default flightsSlice.reducer;

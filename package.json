@@ -3,13 +3,14 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "nodemon",
     "build": "next build",
-    "start": "next start",
+    "start": "cross-env NODE_ENV=production ts-node --project tsconfig.server.json src/server/index.ts",
     "lint": "eslint"
   },
   "dependencies": {
     "@reduxjs/toolkit": "^2.11.2",
+    "@sentry/nextjs": "^10.38.0",
     "axios": "^1.13.4",
     "next": "16.1.6",
     "next-intl": "^4.8.1",
@@ -19,7 +20,9 @@
     "react-icons": "^5.5.0",
     "react-redux": "^9.2.0",
     "recharts": "^3.7.0",
-    "redux-persist": "^6.0.0"
+    "redux-persist": "^6.0.0",
+    "socket.io": "^4.8.3",
+    "socket.io-client": "^4.8.3"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4.1.18",
@@ -27,10 +30,14 @@
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "@types/react-redux": "^7.1.34",
+    "@types/socket.io": "^3.0.1",
+    "cross-env": "^10.1.0",
     "daisyui": "^5.5.14",
     "eslint": "^9",
     "eslint-config-next": "16.1.6",
+    "nodemon": "^3.1.11",
     "tailwindcss": "^4.1.18",
+    "ts-node": "^10.9.2",
     "typescript": "^5"
   }
 }

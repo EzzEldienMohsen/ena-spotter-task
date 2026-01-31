@@ -9,12 +9,39 @@ import Badge from '@/components/atoms/Badge';
 
 interface FlightCardProps {
   flight: Flight;
+  priceChange?: 'up' | 'down' | 'new';
 }
 
-export default function FlightCard({ flight }: FlightCardProps) {
+export default function FlightCard({ flight, priceChange }: FlightCardProps) {
   const t = useTranslations('flight');
+
+  const getPriceChangeBadge = () => {
+    if (!priceChange) return null;
+
+    const badges = {
+      up: (
+        <div className="absolute top-2 right-2 px-2 py-1 bg-red-100 dark:bg-red-900/20 text-red-600 dark:text-red-400 rounded-full text-xs font-medium animate-bounce">
+          ↑ {t('priceUp')}
+        </div>
+      ),
+      down: (
+        <div className="absolute top-2 right-2 px-2 py-1 bg-green-100 dark:bg-green-900/20 text-green-600 dark:text-green-400 rounded-full text-xs font-medium animate-bounce">
+          ↓ {t('priceDown')}
+        </div>
+      ),
+      new: (
+        <div className="absolute top-2 right-2 px-2 py-1 bg-blue-100 dark:bg-blue-900/20 text-blue-600 dark:text-blue-400 rounded-full text-xs font-medium animate-pulse">
+          {t('new')}
+        </div>
+      ),
+    };
+
+    return badges[priceChange];
+  };
+
   return (
-    <div className="card bg-base-100 shadow-md hover:shadow-lg transition-shadow">
+    <div className={`card bg-base-100 shadow-md hover:shadow-lg transition-shadow relative ${priceChange ? 'ring-2 ring-primary' : ''}`}>
+      {getPriceChangeBadge()}
       <div className="card-body">
         <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
           {/* Airline Info */}
