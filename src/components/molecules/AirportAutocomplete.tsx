@@ -34,11 +34,20 @@ export default function AirportAutocomplete({
 
   const selectedAirport = AIRPORTS.find(a => a.code === value);
 
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const newValue = e.target.value;
+    setSearch(newValue);
+    // Clear the selected value when user starts typing
+    if (value) {
+      onChange('');
+    }
+  };
+
   return (
     <div className="relative w-full">
       <Input
         value={selectedAirport ? `${selectedAirport.code} - ${selectedAirport.city}` : search}
-        onChange={(e) => setSearch(e.target.value)}
+        onChange={handleInputChange}
         onFocus={() => setShowDropdown(true)}
         onBlur={() => setTimeout(() => setShowDropdown(false), 200)}
         placeholder={placeholder}
