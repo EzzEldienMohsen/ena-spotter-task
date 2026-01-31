@@ -1,6 +1,6 @@
 'use client';
 
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { useTranslations } from 'next-intl';
 import { useAppSelector, useAppDispatch } from '@/lib/redux/hooks';
 import { selectPriceGraphData } from '@/lib/redux/selectors/flightSelectors';
@@ -12,6 +12,26 @@ export default function PriceGraph() {
   const tCommon = useTranslations('common');
   const dispatch = useAppDispatch();
   const graphData = useAppSelector(selectPriceGraphData);
+  const [barColor, setBarColor] = useState('#3b82f6');
+
+  useEffect(() => {
+    // Detect theme and set appropriate bar color
+    const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+    setBarColor(isDark ? '#60a5fa' : '#3b82f6'); // Lighter blue for dark, standard blue for light
+
+    // Listen for theme changes
+    const observer = new MutationObserver(() => {
+      const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+      setBarColor(isDark ? '#60a5fa' : '#3b82f6');
+    });
+
+    observer.observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ['data-theme'],
+    });
+
+    return () => observer.disconnect();
+  }, []);
 
   const handleBarClick = (data: unknown) => {
     const clickData = data as { minPrice?: number };
@@ -47,7 +67,7 @@ export default function PriceGraph() {
             />
             <Bar
               dataKey="count"
-              fill="#3b82f6"
+              fill={barColor}
               onClick={handleBarClick}
               cursor="pointer"
             />

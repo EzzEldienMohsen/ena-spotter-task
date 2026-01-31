@@ -16,7 +16,7 @@ export default function ResultsPage() {
   const [showFilters, setShowFilters] = useState(false);
 
   return (
-    <div className="min-h-[calc(100vh-4rem)] bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-gray-900 dark:to-gray-800">
+    <div className="min-h-[calc(100vh-4rem)] bg-base-200">
       <LoadingOverlay />
 
       <div className="container mx-auto px-4 py-6">

@@ -8,13 +8,13 @@ export default function NotFound() {
   const locale = useLocale();
 
   return (
-    <div className="min-h-[calc(100vh-4rem)] bg-gradient-to-br from-sky-50 via-blue-50 to-indigo-100 dark:from-gray-900 dark:via-gray-800 dark:to-indigo-950 flex items-center justify-center p-4 relative overflow-hidden">
+    <div className="min-h-[calc(100vh-4rem)] bg-base-200 flex items-center justify-center p-4 relative overflow-hidden">
       {/* Animated Background Elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         {/* Floating Clouds */}
-        <div className="absolute top-20 left-10 w-32 h-16 bg-white/30 dark:bg-white/5 rounded-full blur-xl animate-float"></div>
-        <div className="absolute top-40 right-20 w-40 h-20 bg-white/20 dark:bg-white/5 rounded-full blur-xl animate-float-delay"></div>
-        <div className="absolute bottom-32 left-1/3 w-36 h-18 bg-white/25 dark:bg-white/5 rounded-full blur-xl animate-float"></div>
+        <div className="absolute top-20 left-10 w-32 h-16 bg-base-content/5 rounded-full blur-xl animate-float"></div>
+        <div className="absolute top-40 right-20 w-40 h-20 bg-base-content/5 rounded-full blur-xl animate-float-delay"></div>
+        <div className="absolute bottom-32 left-1/3 w-36 h-18 bg-base-content/5 rounded-full blur-xl animate-float"></div>
 
         {/* Decorative Circles */}
         <div className="absolute top-10 right-10 w-2 h-2 bg-primary/30 rounded-full animate-pulse"></div>
