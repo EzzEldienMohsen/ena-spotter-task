@@ -866,23 +866,6 @@ Contributions are welcome! Please follow these guidelines:
 
 ---
 
-## 📈 Future Enhancements
-
-Potential features to add:
-
-- [ ] **Flight Comparison**: Compare up to 3 flights side-by-side
-- [ ] **Price Alerts**: Notify when prices drop
-- [ ] **Calendar View**: See prices across multiple dates
-- [ ] **Map View**: Visualize flight routes on map
-- [ ] **Saved Searches**: Bookmark frequent searches
-- [ ] **User Accounts**: Save preferences and history
-- [ ] **Social Sharing**: Share flights with friends
-- [ ] **Multi-City**: Complex routing with multiple stops
-- [ ] **Flexible Dates**: ±3 days price comparison
-- [ ] **Airline Reviews**: Show ratings and reviews
-
----
-
 ## 🙏 Acknowledgments
 
 - **Amadeus** - For providing the comprehensive flight search API
